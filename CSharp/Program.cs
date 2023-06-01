@@ -16,6 +16,8 @@ namespace zona_principal
              * Author: YO PS QUIEN MAS XD
              * ***********************************
              */
+            #region Tipos de Datos
+            sumador(5, 67);
             int ladoX = 2;
             int ladoY = 5;
             int radio = 3;
@@ -56,12 +58,16 @@ namespace zona_principal
 
             string apellido = "Perez";
 
+            char letra = 'a';
+
             //Tipos de variable var
             var nombre = "Pepe";
 
             var edad = 20;
 
             var w = 56.7;
+
+            bool isAlive = true;
 
             string numeroEnTexto = "25";
 
@@ -70,6 +76,9 @@ namespace zona_principal
 
 
             Console.WriteLine(edad);
+            #endregion
+
+            #region Otros ejemplos
             /*
              Existe tres tipos de errores:
             *Sintaxis = no cumplir con las nomas de tipado o escritura del lenguaje
@@ -114,15 +123,41 @@ namespace zona_principal
 
 
             Console.WriteLine("La division es: " + x);
+            int result = suma(2147483647, 1);
+            Console.WriteLine("La suma es: " + result);
 
+            #region Arreglos
+            int[] ropero = new int[4];
+            ropero[0] = 1;
+            ropero[1] = 6;
+            ropero[2] = -13;
+            ropero[3] = 236;
+
+            int[,] matriz = new int[4,6]; //fila, columna
+
+            matriz[2, 4] = 23;
+            matriz[4, 2] = 23;
+            #endregion
         }
+        #endregion
         public void metodito()
         {
             int x = 3 * var_global;
         }
+        public static void sumador(int a, int b)
+        {
+            //static = solo puede existir una unica instancia
+            Console.WriteLine("SUMA DE DOS NUMEROS");
+            int suma = a + b;
+            Console.WriteLine("La suma de: " + a + " y " + b + " es: " + suma);
+        }
+        public static int suma(int a, int b)
+        {
+            int suma = a + b;
+            return suma;
+        }
     }
 }
-
 namespace otro
 {
     //dentro de los namespace solo pueden haber clases, namespaces y usings.
@@ -134,11 +169,28 @@ namespace otro
         int y = 9;
         //y = 7; solo se puede declarar variables, mas no reasignar o hacer operaciones con las variables, eso solo se hace en los metodos de la clase
         //Se puede usar la clase Circulo porque su namespace Trigonometricas esta siendo utilizada o llamada arriba de todo
-        public void metodo()
+        public void met(int nit)
         {
-            int y = 9;
-            y = 7;
-            y = 7 * 3;
+            nit = nit + 3;
+        }
+        //pueden existir metodos con el mismo nombre, pero con diferentes tipos de parametros y cantidad
+        public void met(string num)
+        {
+            num = num + 3;
+        }
+        public void met(int ci, string x)
+        {
+            ci = ci + 3;
+        }
+        public void met(string x, int ci)
+        {
+            registroEmpleado("Pedro", "Perez");
+            registroEmpleado("Sofia", "Sanchez");
+            registroEmpleado("Miranda", "Cristopher");
+        }
+        public void registroEmpleado(string Nombre, string Apellido)
+        {
+
         }
     }
 }
