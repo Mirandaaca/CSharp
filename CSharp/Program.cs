@@ -33,10 +33,9 @@
              * un flotante no puede ser guardado en un double
              * un double puede guardar un flotante
              * un entero no puede guardar un flotante
-             * un flotante 
+             * un flotante puede guardar un entero
              */
             double micro = peso;
-
             float x2 = 3.1415f;
 
             Console.WriteLine(x2);
