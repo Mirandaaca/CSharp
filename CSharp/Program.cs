@@ -127,16 +127,21 @@ namespace zona_principal
             Console.WriteLine("La suma es: " + result);
 
             #region Arreglos
+            //unidimensional
             int[] ropero = new int[4];
             ropero[0] = 1;
             ropero[1] = 6;
             ropero[2] = -13;
             ropero[3] = 236;
-
+            //bidimensional
             int[,] matriz = new int[4,6]; //fila, columna
 
             matriz[2, 4] = 23;
             matriz[4, 2] = 23;
+            //tridimiensionales
+            int[,,,] arrays = new int[3, 3, 3, 3];
+            //multidimiensionales
+            int[,,,,] arr = new int[3, 3, 4, 5, 5];
             #endregion
         }
         #endregion
