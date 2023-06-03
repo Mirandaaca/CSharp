@@ -177,7 +177,21 @@ namespace zona_principal
             int x1 = 3; int x3 = 4;
             Console.WriteLine("Suma rara: " + (--x1 + ++x3)); // 2 - 5
             Console.WriteLine("Suma normal: " + (--x1 + x3++)); //3 + 4
-            Console.WriteLine("Suma normal: " + (x1-- + ++x3));
+            Console.WriteLine("Suma normal: " + (x1-- + ++x3)); //3 +5
+            /*
+             eval +=6; ===> eval = eval + 6;
+             eval -= 5; ===> eval = eval - 5
+             eval +=4; ===> eval = eval + 4
+             eval /=4; ===> eval = eval /4
+             */
+
+            //for: cuando sabemos cuantas veces vamos a iterar
+            for(int i = 1; i <=10 ; i++)
+            {
+                Console.WriteLine("Estoy dentro del for " + i);
+                i++;
+            }
+            Console.WriteLine("Ya acabo el for");
             #endregion
         }
 
