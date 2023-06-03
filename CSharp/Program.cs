@@ -125,26 +125,63 @@ namespace zona_principal
             Console.WriteLine("La division es: " + x);
             int result = suma(2147483647, 1);
             Console.WriteLine("La suma es: " + result);
-
+            #endregion
             #region Arreglos
             //unidimensional
             int[] ropero = new int[4];
+            string[] argumentos = new string[0];
             ropero[0] = 1;
             ropero[1] = 6;
             ropero[2] = -13;
             ropero[3] = 236;
+
+            int[] aux = new int[6];
+            aux[0] = ropero[0];
+            //ahora ropero tiene 6 espacios
+            ropero = aux;
+
             //bidimensional
-            int[,] matriz = new int[4,6]; //fila, columna
+            int[,] matriz = new int[4, 6]; //fila, columna
 
             matriz[2, 4] = 23;
-            matriz[4, 2] = 23;
+            // matriz[4, 2] = 23;
             //tridimiensionales
             int[,,,] arrays = new int[3, 3, 3, 3];
             //multidimiensionales
             int[,,,,] arr = new int[3, 3, 4, 5, 5];
+            Console.WriteLine("Ropero en el indice 1:" + ropero[3]);
+
+            #endregion
+            #region SobreArgs
+            Console.WriteLine( "args contiene esta cantidad de elementos: " + args.Length);
+            #endregion
+            #region Bucles
+            //tambien llamados iteradores o loops
+
+
+            //while: lo ocupamos cuando no sabemos cuantas veces vamos a iterar
+            int eval = 10;
+            while (eval >= 1)
+            {
+                Console.WriteLine("Estoy dentro del while" + eval);
+                eval--;
+                /*
+                 la diferencia de usar --eval y eval-- o ++eval o eval++ o derivantes es la siguiente:
+                en --eval primero resta en uno a la variable eval y luego obtiene la variable
+                en eval-- primero obtiene la variable eval y lueego la modifica, causando que al mostrar la misma variable en
+                una sola linea de codigo mediante consola, al usar --eval mostrara el valor actual que tenga eval y al usar eval-- mostrara el valor actual y no se decrementara en la misma linea
+                 */
+            }
+            eval = 11;
+            Console.WriteLine("Ya se acabo el while");
+            int x1 = 3; int x3 = 4;
+            Console.WriteLine("Suma rara: " + (--x1 + ++x3)); // 2 - 5
+            Console.WriteLine("Suma normal: " + (--x1 + x3++)); //3 + 4
+            Console.WriteLine("Suma normal: " + (x1-- + ++x3));
             #endregion
         }
-        #endregion
+
+
         public void metodito()
         {
             int x = 3 * var_global;
