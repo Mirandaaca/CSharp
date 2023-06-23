@@ -188,13 +188,147 @@ namespace zona_principal
             //for: cuando sabemos cuantas veces vamos a iterar
             for(int i = 1; i <=10 ; i++)
             {
+                if(i == 4)
+                {
+                    //continue; // que se salte esta iteracion, que pase a la siguiente
+                    break; //hace que salte toda la iteracion, que se salga del bucle
+                }
                 Console.WriteLine("Estoy dentro del for " + i);
-                i++;
             }
             Console.WriteLine("Ya acabo el for");
             #endregion
-        }
+            #region Condicionales
+            /*
+             * < menor que
+             * > mayor que
+             * <= menor igual que
+             * >= mayor igual que
+             * == igual que
+             * != distinto de
+             * .equals() igual a cadena
+             */
 
+            Console.WriteLine("Iniciando IF");
+            int y1 = 3, y2 = 5;
+            if(y1 < y2)
+            {
+                //entra al if si la comparacion devuelve true
+                Console.WriteLine("y1 es mayor a y2");
+            }
+            else
+            {
+                Console.WriteLine("y1 NO es mayor que y2");
+            }
+            Console.WriteLine("Continua luego del if");
+            //podemos omitir las llaves si nuestro codigo es de una sola linea
+            if (y1 < y2) 
+                Console.WriteLine("y1 es mayor a y2");
+            else 
+                Console.WriteLine("y1 NO es mayor que y2");
+
+            Console.WriteLine("Ingrese un numero de dia (1: Lunes, 2: Martes, 3:Miercoles.....7:Domingo)");
+            int dia = int.Parse(Console.ReadLine()); //1: Lunes, 2: Martes, 3:Miercoles.....7:Domingo
+            if(dia == 1)
+            {
+                Console.WriteLine("Lunes");
+            }
+            else 
+            {
+                if(dia == 2)
+                {
+                    Console.WriteLine("Martes");
+                }
+                else
+                {
+                    if(dia == 3)
+                    {
+                        Console.WriteLine("Miercoles");
+                    }
+                    else
+                    {
+                        if(dia == 4)
+                        {
+                            Console.WriteLine("Jueves");
+                        }
+                        else
+                        {
+                            if(dia == 5)
+                            {
+                                Console.WriteLine("Viernes");
+                            }
+                            else
+                            {
+                                if(dia == 6)
+                                {
+                                    Console.WriteLine("Sabado");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Domingo");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /*if (dia == 1)
+            {
+                Console.WriteLine("Lunes");
+            }
+            else if (dia == 2)
+            {
+                Console.WriteLine("Martes");
+            }
+            else if(dia == 3)
+            {
+                Console.WriteLine("Miercoles");
+            }
+            else if (dia == 4)
+            {
+                Console.WriteLine("Jueves");
+            }
+            else if (dia ==  5)
+            {
+                Console.WriteLine("Viernes");
+            }
+            else if (dia == 6)
+            {
+                Console.WriteLine("Sabado");
+            }
+            else
+            {
+                Console.WriteLine("Domingo");
+            }*/
+            //usamos switch cuando contamos con una variable cuyo dato es 
+            switch (dia)
+            {
+                case 1:
+                    Console.WriteLine("Lunes");
+                    break;
+                case 2:
+                    Console.WriteLine("Martes");
+                    break;
+                case 3:
+                    Console.WriteLine("Miercoles");
+                    break;
+                case 4:
+                    Console.WriteLine("Jueves");
+                    break;
+                case 5:
+                    Console.WriteLine("Viernes");
+                    break;
+                case 6:
+                case 7:
+                    Console.WriteLine("Fin de semana");
+                    break;
+                default:
+                    Console.WriteLine("No es un numero de dia");
+                    break;
+            }
+            #endregion
+            #region OOP
+            #endregion
+        }
 
         public void metodito()
         {
@@ -249,4 +383,8 @@ namespace otro
 
         }
     }
+}
+namespace metoditos
+{
+
 }
